@@ -31,7 +31,7 @@ public class SecurityConfig {
                 .cors(config -> config.configurationSource(corsConfigurationSource))//.cors(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth -> auth
                                 .requestMatchers("/auth/**").permitAll()
-//  .requestMatchers( "/category/**").permitAll()
+                            //  .requestMatchers( "/category/**").permitAll()
                                 .requestMatchers("/product").permitAll()
                                 .requestMatchers(HttpMethod.GET, "/category").hasRole("USER")
                                 .requestMatchers(HttpMethod.POST, "/api/coffee/save").hasRole("ADMIN")

@@ -2,9 +2,13 @@ package cl.ucm.serviceproduct.entities;
 
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name = "user_rol")
+@Setter
+@Getter
 public class UserRol {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
